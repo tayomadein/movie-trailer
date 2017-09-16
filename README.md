@@ -26,7 +26,7 @@ Download this repo as a zipped file from [Github](https://github.com/tayomadein/
 
 * Step 2:
 
-Go to project directory /movie-trailer and 
+In terminal, navigate to project root directory /movie-trailer  and type
 ```
 python entertainment_center.py
 ```
