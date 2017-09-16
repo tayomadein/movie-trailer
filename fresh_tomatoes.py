@@ -12,10 +12,11 @@ main_page_head = '''
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>OM's List!</title>
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
@@ -26,6 +27,13 @@ main_page_head = '''
             margin-top: 200px;
             width: 640px;
             height: 480px;
+        }
+        .center-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
         }
         .hanging-close {
             position: absolute;
@@ -40,10 +48,18 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            min-height: 515px;
+            margin-left: 50px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #87CEFA;
             cursor: pointer;
+            opacity: 0.7;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
+        }
+        .img-shadow {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -108,12 +124,16 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">OM's Favorite Movie Cards</a>
           </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://medium.com/@tayomadein"><span class="fa fa-medium"></span> Medium</a></li>
+            <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container center-container">
       {movie_tiles}
     </div>
   </body>
@@ -124,8 +144,9 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+    <img class="img-shadow" src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <p>{storyline}<p>
 </div>
 '''
 
@@ -145,6 +166,7 @@ def create_movie_tiles_content(movies):
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            storyline=movie.storyline,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
