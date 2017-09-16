@@ -1,6 +1,5 @@
 # FSND Project 1: Movie Trailer Website
-### by Omotayo Madein
-----
+#### by Omotayo Madein
 
 ## Description
 

@@ -1,5 +1,6 @@
 '''Python module that helps to generate a website that displays favourite movies and their attributes
-   Contains function: open_movies_page that will take in a list of movies and generate an HTML file including this content, producing a website to showcase your favorite movies'''
+   Contains function: open_movies_page that will take in a list of movies and generate an HTML file 
+   including this content, producing a website to showcase your favorite movies'''
 
 import webbrowser
 import os
