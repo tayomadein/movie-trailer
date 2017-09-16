@@ -15,8 +15,7 @@ toy_story = media.Movie(
 despicable_me = media.Movie(
     "Despicable Me",
     "The mischievous Minions hope that Gru will return to a life of crime",
-    ("http://t1.gstatic.com/images?q=tbn:ANd9GcTg3JQThacqbSPauObMc700jNW_GT"
-     "Ad-e9DAV_QIWvMYq8v3mVx"),
+    ("http://t1.gstatic.com/images?q=tbn:ANd9GcTg3JQThacqbSPauObMc700jNW_GTAd-e9DAV_QIWvMYq8v3mVx"),  # NOQA
     "https://www.youtube.com/watch?v=6DBi41reeF0")
 
 sin_city = media.Movie(
@@ -50,8 +49,14 @@ pulp_fiction = media.Movie(
     "https://www.youtube.com/watch?v=s7EdQ4FqbhY")
 
 # store movie instances in an array
-movies = [toy_story, despicable_me, sin_city, star_wars, v_vendatta,
-          pulp_fiction]
+movies = [
+    toy_story,
+    despicable_me,
+    sin_city,
+    star_wars,
+    v_vendatta,
+    pulp_fiction
+    ]
 
 # render and open movie trailer website
 fresh_tomatoes.open_movies_page(movies)
