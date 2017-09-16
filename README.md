@@ -42,6 +42,6 @@ python entertainment_center.py
 
 ## Screenshots
 
-![picture alt](https://drive.google.com/file/d/0B1D4rhiTB85nUkFJM0ZPd2U3MXM/view?usp=sharing)
+![picture alt](screenshots/1.png)
 
-![picture alt](https://drive.google.com/file/d/0B1D4rhiTB85nR05HcndaODQ5ZXM/view?usp=sharing)
+![picture alt](screenshots/2.png)
