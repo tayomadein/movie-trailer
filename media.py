@@ -4,7 +4,7 @@ import webbrowser
 
 
 class Movie():
-    """This is a class for creating and storing detsils of my favourite movies"""
+    """This is a class for creating & storing detsils of my favourite movies"""
 
     # Constructor for the movie class - creates instances of class Movie
     def __init__(self, movie_title, movie_storyline, poster_image,
