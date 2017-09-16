@@ -129,7 +129,7 @@ main_page_content = '''
           </div>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://medium.com/@tayomadein"><span class="fa fa-medium"></span> Medium</a></li>
-            <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
+            <li><a href="https://twitter.com/tayomadein"><span class="fa fa-twitter"></span> Twitter</a></li>
           </ul>
         </div>
       </div>
